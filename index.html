@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Image Search PWA</title>
+    <!-- Add Bootstrap CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+</head>
+<body>
+    <div class="container mt-5">
+        <div class="row">
+            <div class="col-md-6">
+                <h4>Image Search</h4>
+                <div class="form-group">
+                    <label for="imageInput">Select an image:</label>
+                    <input type="file" id="imageInput" class="form-control-file">
+                    <img id="imagePreview" class="mt-2" style="max-height:400px" >      
+                    <div id="imgPreview" ></div>
+                </div>
+                <input type ="text" id="urlInput" class="form-control" placeholder="url" value="http://">
+
+                <button type="button" id="searchButton" class="btn btn-primary mt-2">Search</button>
+                <button type="button" onclick="capturePhoto()" class="btn btn-primary mt-2">Capture Photo</button>
+            </div>
+        </div>
+        <div class="row mt-4">
+            <div class="col-md-6">
+                <h4>Search Results</h4>
+                <ul id="resultsList" class="list-group"></ul>
+            </div>
+        </div>
+    </div>
+
+    <!-- Add Bootstrap and JavaScript libraries -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script src="app.js"></script>
+</body>
+</html>
